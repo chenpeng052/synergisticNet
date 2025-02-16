@@ -1,5 +1,6 @@
-# synergisticNet
-code for paper "A synergistic CNN-transformer network with pooling attention fusion for hyperspectral image classification"
+## A Synergistic CNN-Transformer Network with Pooling Attention Fusion for Hyperspectral Image Classification  
+
+**Peng Chen, Wenxuan He, Feng Qian, Guangyao Shi, Jingwen Yan**  
 
 
 ![fig1](https://github.com/user-attachments/assets/6583a7ba-db8f-4478-bf93-8c01a9718af5)
