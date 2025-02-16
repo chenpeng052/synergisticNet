@@ -1,4 +1,4 @@
-![fig1](https://github.com/user-attachments/assets/ddd23a11-3f30-47d5-ab54-7838a821b73b)# synergisticNet
+# synergisticNet
 code for paper "A synergistic CNN-transformer network with pooling attention fusion for hyperspectral image classification"
 
 
