@@ -167,28 +167,14 @@ class HPA(nn.Module):
         x21 = x2.reshape(b * self.groups, c // self.groups, -1)  # b*g, c//g, hw  #2048,2,121
         x22 = self.softmax(self.agp(x2).reshape(b * self.groups, -1, 1).permute(0, 2, 1)) #2048,2,1,1-->2048,2,1--->2048,1,2
         weights = (torch.matmul(x12, y11) + torch.matmul(y12, x11)).reshape(b * self.groups, 1, h, w)
-        return (group_x * weights.sigmoid()).reshape(b, c, h, w)
-        
-class ChannelShuffle(nn.Module):
-    def __init__(self, group):
-        super(ChannelShuffle, self).__init__()
-        self.group = group
-
-    def forward(self, x):
-        B, C, H, W = x.shape
-        assert C % self.group == 0
-        group_C = C // self.group
-        x = x.view(B, self.group, group_C, H, W)
-        x = x.transpose(1, 2).contiguous()
-        x = x.view(B, -1, H, W)
-        return x
+        return (group_x * weights.sigmoid()).reshape(b, c, h, w)        
     
 NUM_CLASS = 20
 
-class SSFTTnet(nn.Module):
+class model(nn.Module):
     def __init__(self, input_channels=30, n_band_1=1584,  n_band_2=64 ,n_band_3=64,num_classes=NUM_CLASS, 
                  num_tokens=4, dim=64, depth=4, heads=16, mlp_dim=8, dropout=0.1, emb_dropout=0.1):
-        super(SSFTTnet, self).__init__()
+        super(model, self).__init__()
         self.L = num_tokens
         self.cT = dim
 
@@ -233,12 +219,12 @@ class SSFTTnet(nn.Module):
 
     def forward(self, x):
         
-        # COS2M_1
+        # TBFE_1
         x1 = self.lwm(x)
         x1 = self.bn1(x1)
         x1 = self.relu(x1)
 
-        # COS2M_2
+        # TBFE_2
         x2 = self.lwm2(x1)
         x2 = self.bn2(x2)
         x= self.relu(x2)
@@ -270,7 +256,7 @@ class SSFTTnet(nn.Module):
 
 
 if __name__ == '__main__':
-    model = SSFTTnet()
+    model = model()
     model.eval()
     print(model)
     input = torch.randn(64, 1, 30, 13, 13)
