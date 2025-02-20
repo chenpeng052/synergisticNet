@@ -163,7 +163,7 @@ class TestDS(torch.utils.data.Dataset):
 def train(train_loader, test_loader, epochs):
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    net = SSFTTnet.SSFTTnet().to(device)
+    net = model.synergisticNet().to(device)
     
     summary(net, (30, 19, 19))
 
