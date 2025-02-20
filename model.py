@@ -171,10 +171,10 @@ class HPA(nn.Module):
     
 NUM_CLASS = 20
 
-class model(nn.Module):
+class synergisticNet(nn.Module):
     def __init__(self, input_channels=30, n_band_1=1584,  n_band_2=64 ,n_band_3=64,num_classes=NUM_CLASS, 
                  num_tokens=4, dim=64, depth=4, heads=16, mlp_dim=8, dropout=0.1, emb_dropout=0.1):
-        super(model, self).__init__()
+        super(synergisticNet, self).__init__()
         self.L = num_tokens
         self.cT = dim
 
