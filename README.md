@@ -11,6 +11,9 @@ This repository contains the code and models for our paper:
 *Chen, Peng et al. "A Synergistic CNN-Transformer Network with Pooling Attention Fusion for Hyperspectral Image Classification."*  
 **Digital Signal Processing**, 2025, Elsevier.  
 
+Feel free to contact us if there is anything we can help. Thanks for your support!
+chenpeng052@gmail.com
+
 
 ![fig1](https://github.com/user-attachments/assets/6583a7ba-db8f-4478-bf93-8c01a9718af5)
 
