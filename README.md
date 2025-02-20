@@ -23,7 +23,7 @@ chenpeng052@gmail.com
 
 ```bash
 git clone https://github.com/chenpeng052/synergisticNet.git
-cd yourrepository
+cd synergisticNet
 ```
 
 2. Prepare your dataset:  
