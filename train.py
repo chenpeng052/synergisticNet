@@ -8,7 +8,7 @@ import torch.nn as nn
 import torch.optim as optim
 from operator import truediv
 import time
-import SSFTTnet
+import model
 from torchsummary import summary
 from ptflops import get_model_complexity_info
 
