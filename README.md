@@ -34,22 +34,11 @@ Place the dataset in the `data` folder with the appropriate structure. For examp
 ├── paviaU.mat
 ├── paviaU_gt.mat
 ```
-3. Install dependencies:
 
-```bash
-pip install -r requirements.txt
-```
-
-4. Train the model:
+3. Train the model:
 
 ```bash
 python train.py
-```
-
-5. Evaluate the model:
-
-```bash
-python test.py
 ```
 
 
