@@ -22,7 +22,7 @@ chenpeng052@gmail.com
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/yourrepository.git
+git clone https://github.com/chenpeng052/synergisticNet.git
 cd yourrepository
 ```
 
