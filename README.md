@@ -17,6 +17,42 @@ chenpeng052@gmail.com
 
 ![fig1](https://github.com/user-attachments/assets/6583a7ba-db8f-4478-bf93-8c01a9718af5)
 
+## Usage
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/yourusername/yourrepository.git
+cd yourrepository
+```
+
+2. Prepare your dataset:  
+Place the dataset in the `data` folder with the appropriate structure. For example:
+
+```
+/data
+├── paviaU.mat
+├── paviaU_gt.mat
+```
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Train the model:
+
+```bash
+python train.py
+```
+
+5. Evaluate the model:
+
+```bash
+python test.py
+```
+
+
 ## Citation
 
 If you find this work helpful, please cite:
